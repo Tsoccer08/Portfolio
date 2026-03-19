@@ -20,11 +20,21 @@ header h1 {
     margin-bottom: 5px;
 }
 
+header p {
+    margin-top: 0;
+    font-style: italic;
+}
+
 nav a {
     margin: 0 10px;
     color: #4ea3ff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1f7ed6;
 }
 
 /* Main sections */
@@ -43,25 +53,42 @@ h2 {
 /* Project cards */
 .project-card {
     background: white;
-    padding: 20px;
+    padding: 25px 20px;
     margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card p {
+    margin: 10px 0 0;
+}
+
+/* Buttons */
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
+    margin-top: 15px;
+    padding: 10px 20px;
     background: #4ea3ff;
     color: white;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn:hover {
     background: #1f7ed6;
+    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -70,4 +97,5 @@ footer {
     color: #666;
     padding: 20px 0;
     margin-top: 40px;
+    border-top: 1px solid #ccc;
 }
